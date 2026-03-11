@@ -1,7 +1,11 @@
 import requests
 
 base_url = "http://api.openweathermap.org/data/2.5/weather"
-city_name = "London,uk"  
+city_name = input("Введите название города и страну через запятую: ")
+
+if city_name == "":       
+    city_name = "London,uk"
+
 api_key = "ddd7edd3fcb7f91dbac703663d22145f" 
 
 params = {
