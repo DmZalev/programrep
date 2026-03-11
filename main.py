@@ -1,8 +1,8 @@
 import requests
 
 base_url = "http://api.openweathermap.org/data/2.5/weather"
-city_name = "London,uk"  # город и код страны
-api_key = "ddd7edd3fcb7f91dbac703663d22145f"  # ваш ключ API
+city_name = "London,uk"  
+api_key = "ddd7edd3fcb7f91dbac703663d22145f" 
 
 params = {
     "q": city_name,
