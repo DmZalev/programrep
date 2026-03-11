@@ -1,12 +1,16 @@
+import os
+from dotenv import load_dotenv
 import requests
+
+load_dotenv()
 
 base_url = "http://api.openweathermap.org/data/2.5/weather"
 city_name = input("Введите название города и страну через запятую: ")
 
-if city_name == "":       
-    city_name = "London,uk"
+if city_name == "":
+    city_name = "London, uk"
 
-api_key = "ddd7edd3fcb7f91dbac703663d22145f" 
+api_key = os.getenv("API_KEY")
 
 params = {
     "q": city_name,
@@ -20,3 +24,4 @@ if response.status_code == 200:
     print(data)
 else:
     print("Error:", response.status_code)
+ 
