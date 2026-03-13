@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import requests
 import time
+import json
 load_dotenv()
 
 start_time = time.time()
@@ -30,3 +31,7 @@ else:
 end_time = time.time()
 input_time = end_time - start_time
 print(f"Время выполнения: {input_time:.2f} секунд")
+response = requests.get(base_url, params=params)
+elapsed = response.elapsed.total_seconds()
+    
+print(f"Время запроса: {elapsed:.2f} секунд")
